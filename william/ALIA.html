@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #a8e6cf; /* Fallback color */
+            background: linear-gradient(to bottom, #a8e6cf, #dcedc8);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .video-background {
+            position: fixed; /* Changed to fixed to stay put while scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        /* This makes the video cover the whole screen like a background */
+        .video-background iframe {
+            width: 100vw;
+            height: 56.25vw; /* 16:9 Aspect Ratio */
+            min-height: 100vh;
+            min-width: 177.77vh; /* 16:9 Aspect Ratio */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.85); /* Slightly more transparent */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in;
+            position: relative;
+            z-index: 1;
+            margin-top: 50px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            color: #4caf50;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 5px solid #4caf50;
+            object-fit: cover; /* Keeps image from stretching */
+            animation: bounceIn 1.5s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        h2 { text-align: center; color: #388e3c; }
+        p { line-height: 1.6; text-align: center; }
+        
+        a {
+            color: #2e7d32;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #4caf50, #388e3c, #2e7d32);
+        }
+
+        .date { text-align: center; font-style: italic; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div>
+       image source: <a href="https://www.pexels.com/photo-of-a-smiling-woman-7749099/" target="_blank">Pexels</a>
+    </div>
+
+    <div class="container">
+        <h1><i>❤️ Uwase Alia ❤️</i></h1>
+        <hr>
+        <img src="alia.jpeg" alt="Alia" width="200" height="200">
+        
+        <h2><i>Message for You 💌</i></h2>
+        <p>Thank you for being honest with me today. I respect your words and the decision you made. Sometimes people meet for a reason, even if it is only for a moment. I truly wish you a life filled with happiness, peace, and beautiful opportunities. You deserve all the best that life has to offer. Take care of yourself and may your journey ahead be wonderful.</p>
+        <h1><i> Just Only you  ❤️</i></h1>
+        <hr>
+        <p><a href="https://www.youtube.com/watch?v=mLOqJHVgp7w" target="_blank"><button style="color: #dde8e6;background-color: rgb(12, 153, 80); border-radius: 10px;">Watch Your Message</button></a></p>
+        <p class="date"><b>DATE</b>: March 11, 2026</p>
+    </div>
+
+</body>
+</html>
