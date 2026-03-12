@@ -19,31 +19,23 @@
             position: relative;
             overflow-x: hidden;
         }
+         
 
-        .video-background {
-            position: fixed; /* Changed to fixed to stay put while scrolling */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            overflow: hidden;
+    button {
+            background-color: #4caf50;
+            color: white;
+            border: 2px solid #388e3c;
+            text-align: center;
+            font-size: larger;
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.10s ease, transform 0.20s ease;
         }
-
-        /* This makes the video cover the whole screen like a background */
-        .video-background iframe {
-            width: 100vw;
-            height: 56.25vw; /* 16:9 Aspect Ratio */
-            min-height: 100vh;
-            min-width: 177.77vh; /* 16:9 Aspect Ratio */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: none;
-        }
-
         .container {
             max-width: 600px;
             background: rgba(255, 255, 255, 0.85); /* Slightly more transparent */
@@ -114,10 +106,14 @@
         
         <h2 style="color: #333;"><i>Message for You 💌</i></h2>
         <p><b style="color: #07c520;"> Hey! Alia</b> I hope you are doing well So this masseges for you wherever life takes you. <mark>remember</mark> that. There is <b>Boy</b> who truly <b>loves you</b> and wishes the best for you. <strong>Never forget to smile because your smile is beautiful and powerful </strong> it can change a moment and it once stole my heart. May life always give you reasons to smile.</p>
-        <h1><i> Just Only you  ❤️</i></h1>
-        <hr>
-         <p class="date"><b>DATE</b>: March 11, 2026</p>
+        <h1><i> ❤️Just Only you  ❤️</i></h1>
+
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <button onclick="window.open('https://www.youtube.com/watch?v=6CkQOZKaHFc&list=RD6CkQOZKaHFc&start_radio=1', '_blank')" cent>Click Me</button>
+        
     </div>
+    <hr>
+     <p class="date" style="text-align: center;"><b>DATE</b>: March 12, 2026</p>
 
 </body>
 </html>
